@@ -4,7 +4,7 @@ class Administrativo extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		$this->load->model('customers_model');
+		$this->load->model('customers_model');  
 	}
 
 	/**
