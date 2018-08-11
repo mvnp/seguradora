@@ -4,16 +4,16 @@
 !*/cache/index.html
 !*/cache/.htaccess
 sftp-config.json
+application/config/database.php
 
 user_guide_src/build/*
 user_guide_src/cilexer/build/*
 user_guide_src/cilexer/dist/*
 user_guide_src/cilexer/pycilexer.egg-info/*
 
-#codeigniter 3
+#codeigniter 3 - Todos exceto (!)
 application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
-!application/config/database.php
 /vendor/
 *.zip
