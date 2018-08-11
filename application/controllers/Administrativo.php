@@ -7,6 +7,10 @@ class Administrativo extends CI_Controller {
 		$this->load->model('customers_model');
 	}
 
+	/**
+	 * Redirecionamento
+	 * @return [type] [description]
+	 */
 	public function index(){
 		redirect(base_url("administrativo/lista"), 'refresh');
 	}

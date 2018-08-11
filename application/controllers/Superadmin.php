@@ -11,9 +11,7 @@ class Superadmin extends CI_Controller {
 	 * @return [type] [description]
 	 */
 	public function listarempresas(){
-		############################################################################################################################
-		$register = $this->routing->register_route("Lista as empresas habilitadas e não habilitadas a trabalhar com o sistema.", 1);
-		############################################################################################################################
+		// ...
 		$data['users'] = $this->users_model->getAllUsers();
 		$this->load->loaderPage("superadmin/listar_empresas", $data);
 	}
@@ -23,10 +21,7 @@ class Superadmin extends CI_Controller {
 	 * @return [type] [description]
 	 */
 	public function novaempresa(){
-		
-		##############################################################################################
-		$register = $this->routing->register_route(_t("Cadastra uma nova empresa dentro do sistema."), 1);
-		##############################################################################################
+		// ...
 		if($_SERVER['REQUEST_METHOD'] == "POST"){
 			/* Validando os dados do formulário */
             $this->form_validation->set_rules('email', _t("e-mail"), 'required|trim|valid_email|is_unique[admin_empresa.email]');
@@ -60,10 +55,7 @@ class Superadmin extends CI_Controller {
 	 * @return [type] [description]
 	 */
 	public function editarempresa($id = null){
-
-		##########################################################################################################
-		$register = $this->routing->register_route("Edita e-mail e senha de empresas cadastradas no sistema.", 1);
-		##########################################################################################################
+		// ...
 		if($_SERVER['REQUEST_METHOD'] == "POST"){
 			/* Validando os dados do formulário */
             $this->form_validation->set_rules('email', _t("e-mail"), 'required|trim|valid_email|callback_email_check');
@@ -115,10 +107,7 @@ class Superadmin extends CI_Controller {
 	 * @return [type] [description]
 	 */
 	public function habilitarempresas($id = null){
-
-		######################################################################################################################
-		$register = $this->routing->register_route("Habilitar empresa no sistema. Sem habilitar ela nem pode fazer login.", 1);
-		######################################################################################################################
+		// ...
 		if($id == false){
 			$this->session->set_flashdata('danger', _t("Nenhum usuário selecionado."));
 			redirect(base_url("superadmin/listarempresas"));
@@ -136,10 +125,7 @@ class Superadmin extends CI_Controller {
 	 * @return [type] [description]
 	 */	
 	public function desabilitarempresa($id = null){
-
-		#######################################################################################################################
-		$register = $this->routing->register_route("Habilitar empresa no sistema. Desabilitada, ela nem pode fazer login.", 1);
-		#######################################################################################################################
+		// ...
 		if($id == false){
 			$this->session->set_flashdata('danger', _t("Nenhum usuário selecionado."));
 			redirect(base_url("superadmin/listarempresas"));
@@ -157,10 +143,7 @@ class Superadmin extends CI_Controller {
 	 * @return [type] [description]
 	 */	
 	public function deleteempresa($id = null){
-
-		#############################################################################################################
-		$register = $this->routing->register_route("Exclue a empresa e indisponibiliza o uso do sistema pra ela.", 1);
-		##############################################################################################################
+		// ...
 		if($id == false){
 			$this->session->set_flashdata('danger', _t("Nenhum usuário selecionado."));
 			redirect(base_url("superadmin/listarempresas"));
@@ -178,9 +161,7 @@ class Superadmin extends CI_Controller {
 	 * @return [type] [description]
 	 */
 	public function configuracoes($id = null){
-		######################################################################################################
-		$register = $this->routing->register_route("Configurações adicionais para cada conta no sistema.", 1);
-		######################################################################################################
+
 		// Tratar as configurações para registrar no banco de dados
 		if($_SERVER['REQUEST_METHOD'] == "POST"){
 
@@ -240,10 +221,6 @@ class Superadmin extends CI_Controller {
 	}
 
 	public function traducoes($id = null){
-		########################################################################################################
-		$register = $this->routing->register_route("Traduzindo o sistema para os idiomas que serão usados.", 1);
-		########################################################################################################
-
 		// fazendo atualização do termo a ser traduzido
 		if($_SERVER['REQUEST_METHOD'] === 'POST'){
 			// guardando as variáveis do post
@@ -298,7 +275,7 @@ class Superadmin extends CI_Controller {
 	 * @return [type] [description]
 	 */
 	public function email_check(){
-
+		// ...
 		$post = $_POST;
 		$id = $this->uri->segment(3);
 		// Se o e-mail que ele digitar já existir no banco e não for dele, false, se for o dele true.
@@ -318,7 +295,7 @@ class Superadmin extends CI_Controller {
 	 * @return [type] [description]
 	 */
 	private function traducoes_pagination($id, $Paginate){
-
+		// ...
 		$atual = array_search($id, $Paginate);
 		$reg_atual = $Paginate[$atual];
 

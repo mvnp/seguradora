@@ -9,7 +9,10 @@ class Routing {
 	 * @param [type] $params [description]
 	 */
 	public function __construct($params = null){
+
 		$this->CI =& get_instance();
+		$this->CI->load->model('routes_model');
+		$this->registerRoutes();
 	}
 
 	/**
@@ -17,10 +20,11 @@ class Routing {
 	 * @param  [type] $description [description]
 	 * @return [type] [description]
 	 */
-    public function register_route($description, $private){
-
-		$data['description'] = $description;
-		$data['private'] = $private;
+    private function registerRoutes(){
+    	
+		// Registro de rotas dentro do sistema ...
+		$data['description'] = ((isset($description)) ? $description : "Aguardando ...");
+		$data['private'] = ((isset($private)) ? $private : 1);
 		$data['status'] = 1;
 		$data['class'] = strtolower(trim($this->CI->router->fetch_class()));
 		$data['method'] = strtolower(trim($this->CI->router->fetch_method()));
