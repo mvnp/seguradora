@@ -1,0 +1,4 @@
+/* Add here all your CSS customizations */
+.ununderline{text-decoration: none!important}
+.pricing-table h3 span {font: bold 18px / 92px Georgia, Serif}
+.pricing-table li.branco {border-top: 1px solid #fff}
