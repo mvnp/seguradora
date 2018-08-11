@@ -17,24 +17,24 @@
 						<li>
 							<a href="<?php echo base_url("superadmin/listarempresas") ?>">
 								<i class="fa fa-cogs" aria-hidden="true"></i>
-								<span>Empresas</span>
+								<?php echo _t("<span>Empresas</span>") ?>
 							</a>
 						</li>
 						<li>
 							<a href="<?php echo base_url("permissoes/listargrupos") ?>">
 								<i class="fa fa-cogs" aria-hidden="true"></i>
-								<span>Permissões</span>
+								<?php echo _t("<span>Permissões</span>") ?>
 							</a>
 						</li>
 						<li class="nav-parent">
 							<a>
 								<i class="fa fa-users" aria-hidden="true"></i>
-								<span>Clientes</span>
+								<?php echo _t("<span>Clientes</span>") ?>
 							</a>
 							<ul class="nav nav-children">
 								<li>
 									<a href="<?php echo base_url("administrativo/lista") ?>">
-										 Gestão de Clientes
+										 <?php echo _t("Gestão de Clientes") ?>
 									</a>
 								</li>
 							</ul>
@@ -42,8 +42,65 @@
 						<li>
 							<a href="<?php echo base_url("superadmin/traducoes/12") ?>">
 								<i class="fa fa-cogs" aria-hidden="true"></i>
-								<span>Traduções</span>
+								<?php echo _t("<span>Traduções</span>") ?>
 							</a>
+						</li><hr>
+						<li>
+							<a href="<?php echo base_url("dashboard") ?>">
+								<i class="fa fa-cogs" aria-hidden="true"></i>
+								<?php echo _t("<span>Dashboard</span>") ?>
+							</a>
+						</li>
+						<li class="nav-parent">
+							<a>
+								<i class="fa fa-users" aria-hidden="true"></i>
+								<?php echo _t("<span>Clientes</span>") ?>
+							</a>
+							<ul class="nav nav-children">
+								<li>
+									<a href="<?php echo base_url("clientes/leads") ?>">
+										<?php echo _t("Leads") ?>
+									</a>
+								</li>
+								<li>
+									<a href="<?php echo base_url("clientes/efetivos") ?>">
+										<?php echo _t("Efetivos") ?>
+									</a>
+								</li>
+								<li>
+									<a href="<?php echo base_url("clientes/efetivos") ?>">
+										<?php echo _t("Bloqueados") ?>
+									</a>
+								</li>
+								<li>
+									<a href="<?php echo base_url("clientes/gestao") ?>">
+										<?php echo _t("Gestao de informações") ?>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-parent">
+							<a>
+								<i class="fa fa-users" aria-hidden="true"></i>
+								<?php echo _t("<span>Financeiro</span>") ?>
+							</a>
+							<ul class="nav nav-children">
+								<li>
+									<a href="<?php echo base_url("financeiro/aguardando") ?>">
+										<?php echo _t("Aguardando pagamento") ?>
+									</a>
+								</li>
+								<li>
+									<a href="<?php echo base_url("financeiro/aprovados") ?>">
+										<?php echo _t("Pagamentos aprovados") ?>
+									</a>
+								</li>
+								<li>
+									<a href="<?php echo base_url("financeiro/vencendo") ?>">
+										<?php echo _t("Vencimento próximo") ?>
+									</a>
+								</li>
+							</ul>
 						</li>
 					</ul>
 				</nav>
