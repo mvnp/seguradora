@@ -6,7 +6,7 @@ class Clientes extends CI_Controller {
 	 * Carregando o __construct()
 	 */
 	public function __construct(){
-		parent::__construct();
+		parent::__construct(); 
 	}
 
 	/**
